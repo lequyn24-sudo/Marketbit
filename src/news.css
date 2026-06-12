@@ -749,8 +749,11 @@
   .category-grid,
   .must-read-grid,
   .crypto-tools-row,
-  .footer-grid {
+  .footer-grid,
+  .article-layout,
+  .coin-layout {
     grid-template-columns: 1fr;
+    flex-direction: column !important;
   }
 
   /* Card Heights & Overflows */
@@ -900,3 +903,34 @@ html, body {
   opacity: 1;
 }
 
+/* Subpage Layout Classes */
+.article-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.coin-layout {
+  display: flex;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: rgba(74, 222, 128, 0.3);
+  border-radius: 10px;
+}
+
+.table-min-width {
+  min-width: 500px;
+}

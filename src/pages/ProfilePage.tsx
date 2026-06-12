@@ -115,6 +115,8 @@ const ProfilePage = () => {
         {/* TAB CONTENT */}
         {activeTab === 'portfolio' && (
           <div className="glass-widget" style={{ padding: '30px', borderRadius: '24px' }}>
+            <div className="table-responsive">
+              <div className="table-min-width">
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', color: 'rgba(255,255,255,0.5)', fontSize: '12px', textTransform: 'uppercase', fontWeight: 700, paddingBottom: '15px', borderBottom: '1px solid rgba(255,255,255,0.1)', marginBottom: '15px' }}>
               <div>Asset</div>
               <div style={{ textAlign: 'right' }}>Amount</div>
@@ -135,6 +137,8 @@ const ProfilePage = () => {
                   <div style={{ textAlign: 'right', color: asset.change.startsWith('+') ? '#4ade80' : '#ef4444', fontWeight: 700 }}>{asset.change}</div>
                 </div>
               ))}
+            </div>
+            </div>
             </div>
           </div>
         )}

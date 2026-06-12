@@ -85,15 +85,12 @@ const ArticlePage = () => {
       </div>
 
       {/* Layout Container */}
-      <div style={{ 
+      <div className="article-layout" style={{ 
         maxWidth: '1200px', 
         margin: '-150px auto 0', 
         position: 'relative', 
         zIndex: 10,
-        padding: '0 20px',
-        display: 'flex',
-        gap: '40px',
-        alignItems: 'flex-start'
+        padding: '0 20px'
       }}>
         
         {/* Left Column: Article Content */}

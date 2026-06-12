@@ -121,7 +121,7 @@ const CoinPage = () => {
             </div>
           )}
 
-          <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
+          <div className="coin-layout">
             
             {/* LEFT COLUMN: GAINERS & LOSERS */}
             <div style={{ flex: '1 1 60%', display: 'flex', flexDirection: 'column', gap: '40px' }}>
@@ -131,7 +131,8 @@ const CoinPage = () => {
                 <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <span style={{ color: '#4ade80' }}>🚀</span> Top 20 Gainers
                 </h3>
-                <div style={{ display: 'grid', gap: '15px' }}>
+                <div className="table-responsive">
+                  <div className="table-min-width" style={{ display: 'grid', gap: '15px' }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '50px 2fr 1.5fr 1fr', padding: '0 10px 10px', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)', fontSize: '12px', textTransform: 'uppercase', fontWeight: 700 }}>
                     <div>#</div>
                     <div>Asset</div>
@@ -156,6 +157,7 @@ const CoinPage = () => {
                       </div>
                     </div>
                   ))}
+                  </div>
                 </div>
               </div>
 
@@ -164,7 +166,8 @@ const CoinPage = () => {
                 <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <span style={{ color: '#ef4444' }}>🩸</span> Top 20 Losers
                 </h3>
-                <div style={{ display: 'grid', gap: '15px' }}>
+                <div className="table-responsive">
+                  <div className="table-min-width" style={{ display: 'grid', gap: '15px' }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '50px 2fr 1.5fr 1fr', padding: '0 10px 10px', borderBottom: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)', fontSize: '12px', textTransform: 'uppercase', fontWeight: 700 }}>
                     <div>#</div>
                     <div>Asset</div>
@@ -189,6 +192,7 @@ const CoinPage = () => {
                       </div>
                     </div>
                   ))}
+                  </div>
                 </div>
               </div>
 
