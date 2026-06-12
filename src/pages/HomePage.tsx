@@ -153,7 +153,7 @@ const HomePage = () => {
     <div style={{ position: 'relative' }}>
       
       {/* HERO SECTION: Glass Cards */}
-      <div style={{ minHeight: 'calc(100vh - 140px)', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '40px' }}>
+      <div style={{ minHeight: 'calc(100vh - 140px)', position: 'relative', display: 'flex', flexDirection: 'column', width: '100%', paddingTop: '40px' }}>
         
         {/* HERO TEXT to fill empty space */}
         <div style={{ textAlign: 'center', marginBottom: '60px', marginTop: 'auto', zIndex: 10, position: 'relative' }}>
