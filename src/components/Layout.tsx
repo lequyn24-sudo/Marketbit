@@ -10,6 +10,7 @@ const Layout = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check auth status on route change
@@ -71,11 +72,29 @@ const Layout = () => {
       <nav className="glass-nav" style={{ marginTop: '0' }}>
         <Link 
           to="/"
-          style={{ textDecoration: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' }}
+          style={{ textDecoration: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', zIndex: 1001 }}
         >
           <img src="/MarketBit_4.gif" alt="MarketBit Logo" style={{ height: '40px', objectFit: 'contain' }} />
         </Link>
-        <div className="nav-links">
+
+        {/* Hamburger Button (Mobile Only) */}
+        <div 
+          className={`hamburger-btn ${isMobileMenuOpen ? 'open' : ''}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Mobile Overlay */}
+        <div 
+          className={`mobile-overlay ${isMobileMenuOpen ? 'open' : ''}`} 
+          onClick={() => setIsMobileMenuOpen(false)}
+        ></div>
+
+        <div className={`nav-menu-container ${isMobileMenuOpen ? 'open' : ''}`}>
+          <div className="nav-links">
           <Link 
             to="/" 
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} 
@@ -176,6 +195,7 @@ const Layout = () => {
               Sign Up
             </button>
           )}
+        </div>
         </div>
       </nav>
 

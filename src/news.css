@@ -775,3 +775,120 @@
   }
 }
 
+/* ==========================================================================
+   GLOBAL LAYOUT FIXES
+   ========================================================================== */
+html, body {
+  overflow-x: hidden !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+}
+
+/* ==========================================================================
+   HAMBURGER MENU
+   ========================================================================== */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-btn.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: var(--neon-green);
+}
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: var(--neon-green);
+}
+
+.nav-menu-container {
+  display: contents; /* desktop default */
+}
+
+@media screen and (max-width: 1024px) {
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .nav-menu-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(5, 16, 9, 0.95);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(74, 222, 128, 0.2);
+    padding: 80px 20px 30px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.8);
+  }
+
+  .nav-menu-container.open {
+    right: 0;
+  }
+
+  .nav-menu-container .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .nav-menu-container .nav-link {
+    font-size: 18px;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-menu-container > div:last-child {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu-container .subscribe-btn,
+  .nav-menu-container .header-ghost-btn {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.open {
+  display: block;
+  opacity: 1;
+}
+
