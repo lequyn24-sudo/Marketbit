@@ -739,7 +739,12 @@
     gap: 15px;
   }
 
+  .news-section {
+    padding: 60px 15px 0 15px !important;
+  }
+
   /* Grids to 1 Column */
+  .news-section,
   .news-grid,
   .category-grid,
   .must-read-grid,
