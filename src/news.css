@@ -677,8 +677,9 @@
 /* Tablet (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
   /* Layout adjustments */
-  .main-layout {
-    grid-template-columns: 1fr; /* Stack main feed and sidebar */
+  .hero-grid {
+    grid-template-columns: 1fr !important; /* Stack main feed and sidebar */
+    padding: 0 20px !important;
   }
 
   .crypto-tools-row {
@@ -711,14 +712,18 @@
   h2 { font-size: 24px; }
   
   .glass-nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     padding: 15px;
   }
   .nav-links {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+  }
+  .hero-grid {
+    padding: 0 15px !important;
   }
 
   /* Grids to 1 Column */
