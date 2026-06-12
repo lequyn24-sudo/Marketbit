@@ -713,8 +713,8 @@
   h2 { font-size: 24px; }
   
   .glass-nav {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     gap: 15px;
     padding: 15px;
   }
@@ -741,6 +741,7 @@
 
   /* Grids to 1 Column */
   .news-grid,
+  .category-grid,
   .must-read-grid,
   .crypto-tools-row,
   .footer-grid {
@@ -794,8 +795,9 @@ html, body {
   justify-content: space-between;
   width: 30px;
   height: 21px;
-  cursor: pointer;
+  cursor: pointer !important;
   z-index: 1001;
+  pointer-events: auto !important;
 }
 
 .hamburger-btn span {
