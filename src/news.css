@@ -749,11 +749,22 @@
   .category-grid,
   .must-read-grid,
   .crypto-tools-row,
-  .footer-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
   .article-layout,
   .coin-layout {
-    grid-template-columns: 1fr;
     flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .article-layout > .glass-widget {
+    padding: 25px !important;
+  }
+  
+  .article-layout h1 {
+    font-size: 28px !important;
   }
 
   /* Card Heights & Overflows */
