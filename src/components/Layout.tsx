@@ -72,7 +72,7 @@ const Layout = () => {
       <nav className="glass-nav" style={{ marginTop: '0' }}>
         <Link 
           to="/"
-          style={{ textDecoration: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', zIndex: 1001 }}
+          style={{ textDecoration: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' }}
         >
           <img src="/MarketBit_4.gif" alt="MarketBit Logo" style={{ height: '40px', objectFit: 'contain' }} />
         </Link>
